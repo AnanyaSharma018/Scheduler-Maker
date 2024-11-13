@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('Tms Home Page/background.jpg') no-repeat center center fixed; /* Use your background image path */
+    background-size: cover; /* Makes sure the background image covers the entire viewport */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1514px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden; /* Ensures rounded corners apply to child elements */
+}
+
+.login-section {
+    flex: 1;
+    padding: 200px 50px 50px;
+   
+}
+
+.login-box {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adds space between the logo and text */
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.google-btn {
+    background-color: #3b5998; /* Google blue color */
+}
+.google-btn:hover {
+    background-color: #2d4373 ; /* Slightly darker shade for hover */
+    transform: scale(1.05); /* Slightly scales up the button */
+}
+
+.facebook-btn {
+    background-color: #3b5998; /* Facebook blue color */
+    margin-bottom: 30px;
+}
+.facebook-btn:hover {
+    background-color: #2d4373; /* Slightly darker shade for hover */
+    transform: scale(1.05); /* Slightly scales up the button */
+}
+
+
+.logo-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 20px;
+    display: block;
+    color: #555;
+}
+
+.login-btn {
+    background-color: #2c3e50; /*change*/
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.login-btn:hover {
+    background-color: #1a252f; /* Darker shade for hover */
+    transform: scale(1.05); /* Slightly scales up the button */
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-size: cover ;
+    height: 100%;
+    max-height: 800px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .image-section {
+        display: none; /* Hide the image section on small screens */
+    }
+}

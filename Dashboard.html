@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="assests/profile.png" alt="Profile Image">
+                <p>Profile</p>
+            </div>
+            <ul class="nav-links">
+                <li onclick="showPage('dashboard')">Dashboard</li>
+                <li onclick="showPage('faculty')" class="active">Faculty</li>
+                <li onclick="showPage('classes')">Classes</li>
+                <li onclick="showPage('subject')">Subject</li>
+                <li onclick="showPage('room-number')">Room Number</li>
+                <li onclick="showPage('timetable-page')">Time Table</li>
+                <li onclick="showPage('settings-page')">Settings</li>
+            </ul>
+            <button class="logout-btn">Logout</button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- DASHBOARD PAGE BEGINS -->
+            <div id="dashboard" class="page active">
+                <!--h2>Dashboard</h2>
+                <p>Welcome to the dashboard.</p>
+                <h3>Dashboard</h3-->
+                <!--div class="dashboard-cards">
+                    <div class="card blue">Lorem Ipsum</div>
+                    <div class="card pink">Lorem Ipsum</div>
+                    <div class="card green">Lorem</div>
+                    <div class="card orange"></div>
+                </div-->
+                 <!-- Main Content -->
+        <!-- Main Content -->
+        <!--div class="main-content">
+            <header>
+                <div class="header-left">
+                    <h1>Hello John <span>👋</span></h1>
+                    <p>Welcome To Scheduler Maker</p>
+                </div>
+                <div class="header-right">
+                    <i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-search"></i>
+                </div>
+            </header-->
+            
+            <div class="header">
+                <div class="welcome-section">
+                    <h2>Hello John 👋</h2>
+                    <p>Welcome To Scheduler Maker</p>
+                </div>
+                <div class="header-icons">
+                    <img src="assests/search.png" alt="Search" class="icon">
+                    <img src="assests/bell.png" alt="Notifications" class="icon">
+                    <img src="assests/add.png" alt="Add" class="icon">
+                </div>
+            </div>
+            
+            
+            <div class="content-grid">
+                <div class="notification-center">
+                    <h2>Notification Center</h2>
+                    <p>Lorem ipsum lorem ipsum</p>
+                    <p>Lorem ipsum lorem ipsum</p>
+                    <p>Lorem ipsum lorem ipsum</p>
+                    <p>Lorem ipsum lorem ipsum</p>
+                </div>
+                
+                <div class="recent-changes">
+                    <h2>Recently Changes</h2>
+                    <ul>
+                        <li><span>1.</span> Lorem ipsum lorem ipsum</li>
+                        <li><span>•</span> Lorem ipsum lorem ipsum</li>
+                        <li><span>•</span> Lorem ipsum lorem ipsum</li>
+                        <li><span>•</span> Lorem ipsum lorem ipsum</li>
+                    </ul>
+                </div>
+                
+                <div class="schedule-efficiency">
+                    <h2>Schedule Efficiency</h2>
+                    <img src="assests/Graph.png" alt="Chart 1">
+                    <img src="assests/graph1.png" alt="Chart 2">
+                </div>
+            </div>
+        </div>
+    
+
+
+            <!-- FACULTY PAGE BEGINS-->
+            <div id="faculty" class="page">
+                <h2>FACULTY</h2>
+                <h3>Add a New Record or Update</h3>
+                <div class="faculty-form-table">
+                    <form class="faculty-form">
+                        <label>Faculty Name:</label>
+                        <input type="text" placeholder="John Doe">
+
+                        <label>Subject Code:</label>
+                        <input type="text" placeholder="Bca-401">
+
+                        <label>F-ID:</label>
+                        <input type="text" placeholder="101">
+
+                        <label>Email:</label>
+                        <input type="email" placeholder="johndoe@gmail.com">
+
+                        <!-- Buttons -->
+                        <div class="button-group">
+                            <button type="button" id="addFaculty">Add</button>
+                            <button type="button" id="modifyFaculty">Modify</button>
+                            <button type="button" id="deleteFaculty">Delete</button>
+                        </div>
+
+                        <button type="submit" class="save-btn">Save</button>
+                    </form>
+
+                    <!-- Faculty Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>F-Id</th>
+                                <th>Subject Code</th>
+                                <th>Faculty Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>102</td>
+                                <td>Bca-401</td>
+                                <td>John Doe</td>
+                                <td>johndoe@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>202</td>
+                                <td>Bca-201</td>
+                                <td>Tony Stark</td>
+                                <td>tonystarkk@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>502</td>
+                                <td>Bca-101</td>
+                                <td>John Smith</td>
+                                <td>johnsmith@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            
+
+            <!-- CLASSES BEIGN BEGINS -->
+
+<div id="classes" class="page">
+    <h2 class="page-title">CLASSES</h2>
+    
+    <div class="classes-form-container">
+        <!-- Dropdowns for Course, Semester, and Section -->
+        <div class="dropdown-container">
+            <select class="dropdown">
+                <option>Select Course</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>BTECH</option>
+                <option>MBA</option>
+                <option>PGDM</option>
+            </select>
+
+            <select class="dropdown">
+                <option>Select Semester</option>
+                <option>Semester 1</option>
+                <option>Semester 2</option>
+                <option>Semester 3</option>
+                <option>Semester 4</option>
+                <option>Semester 5</option>
+                <option>Semester 6</option>
+            </select>
+
+            <select class="dropdown">
+                <option>Select Section</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+            </select>
+        </div>
+
+        
+
+        <!-- Save Button -->
+        <button class="save-btn">Save</button>
+    </div>
+</div>
+
+            <!--SUBJECT PAGE BEGINS-->
+            <div id="subject" class="page" style="display: none;">
+                <!-- Grey Background Header -->
+                <div class="subject-header">
+                  <h1>  SUBJECTS<h1>
+                </div>
+            
+                <!-- Dropdown Section -->
+                <div class="subject-dropdowns">
+                    <div>
+                        <label for="course-select">Select Course:</label>
+                        <select id="course-select">
+                            <option>BCA</option>
+                            <option>BBA</option>
+                            <option>BTECH</option>
+                            <option>MBA</option>
+                            <option>PGDM</option>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <label for="semester-select">Select Semester:</label>
+                        <select id="semester-select">
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <!-- Table Section -->
+                <div class="subject-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Bca-501</td><td>DBMS</td></tr>
+                            <tr><td>Bca-502</td><td>Java</td></tr>
+                            <tr><td>Bca-503</td><td>CN</td></tr>
+                            <tr><td>Bca-504</td><td>NM</td></tr>
+                            <tr><td>Bca-505</td><td>DBMS (Practical)</td></tr>
+                            <tr><td>Bca-506</td><td>Java (Practical)</td></tr>
+                            <tr><td>Bca-507</td><td>Viva Voice on Summer Training</td></tr>
+                            <tr><td>Bca-508</td><td>MP</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Save Button -->
+                <div class="subject-save-btn">
+                    <button>Save</button>
+                </div>
+            </div>
+            
+            
+
+            <!-- ROOM NUMBER PAGE BEGINS -->
+            <div id="room-number" class="page">
+                <h2>Room Number</h2>
+        <div class="page-header">
+            <h1>ROOM</h1>
+          </div>
+          
+          <div class="dropdowns">
+            <label for="roomNumber">Room Number:</label>
+            <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter Room Number">
+          
+            <label for="className">Class Name:</label>
+            <select id="className" name="className">
+              <option>Select Class</option>
+              <option>Class 1</option>
+              <option>Class 2</option>
+              <option>Class 3</option>
+              <!-- Add more class options as needed -->
+            </select>
+          
+            <label for="coordinatorName">Coordinator Name:</label>
+            <select id="coordinatorName" name="coordinatorName">
+              <option>Select Coordinator</option>
+              <option>John Doe</option>
+              <option>Jane Smith</option>
+              <option>Mark Johnson</option>
+              <!-- Add more coordinator options as needed -->
+            </select>
+          </div>
+          
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Room Number</th>
+                  <th>Class Name</th>
+                  <th>Coordinator Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Dummy data for table rows -->
+                <tr>
+                  <td>101</td>
+                  <td>Class 1</td>
+                  <td>John Doe</td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td>Class 2</td>
+                  <td>Jane Smith</td>
+                </tr>
+                <tr>
+                  <td>103</td>
+                  <td>Class 3</td>
+                  <td>Mark Johnson</td>
+                </tr>
+                <!-- Additional rows as needed -->
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="add-btn">Add</button>
+            <button class="update-btn">Update</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+          
+          <button class="save-btn">Save</button>
+          
+          
+            </div>
+
+           
+      <!--TIME TABLE PAGE BEGINS-->
+    <!-- TIME TABLE PAGE BEGINS -->
+<div id="timetable-page" class="page">
+    <div class="header">
+        <h3>G.L. Bajaj Institute of Management</h3>
+        <p>Department of BCA</p>
+        <p>Time Table</p>
+        <p>Odd Semester | 2024-2025 | BCA 3A | Room No: 8002</p>
+    </div>
+
+    <!-- Timetable Table -->
+    <table class="timetable">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>8:55 - 9:55</th>
+                <th>9:55 - 10:55</th>
+                <th>10:55 - 11:05</th> <!-- Short Break -->
+                <th>11:05 - 12:05</th>
+                <th>12:05 - 1:05</th>
+                <th>1:05 - 2:05</th> <!-- Lunch Break -->
+                <th>2:05 - 3:05</th>
+                <th>3:05 - 4:05</th>
+                <th>4:05 - 4:35</th> <!-- Break -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>NM (MBS)</td>
+                <td>CN (PC)</td>
+                <td rowspan="6" class="break">BREAK</td>
+                <td>DBMS Lab (SKG)</td>
+                <td>Java (SKS)</td>
+                <td rowspan="6" class="lunch">LUNCH</td>
+                <td>Java (SKS)</td>
+                <td>MP</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>NM (MBS)</td>
+                <td>CN (PC)</td>
+                <td>LIB</td>
+                <td>CN (PC)</td>
+                <td>Java (SKS)</td>
+                <td>MP</td>
+                <td>DBMS (SKG)</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>DBMS (SKG)</td>
+                <td>NM (MBS)</td>
+                <td>PDP</td>
+                <td>DBMS Lab (SKG)</td>
+                <td>MP</td>
+                <td>NM (MBS)</td>
+                <td>CN (PC)</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Java Lab (SKS)</td>
+                <td>CN (PC)</td>
+                <td>NM (MBS)</td>
+                <td>DBMS (SKG)</td>
+                <td>MP</td>
+                <td>Java (SKS)</td>
+                <td>Club</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>DBMS (SKG)</td>
+                <td>Java (SKS)</td>
+                <td>LIB</td>
+                <td>CN (PC)</td>
+                <td>MP</td>
+                <td>Sports</td>
+                <td>DBMS (SKG)</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>DBMS (SKG)</td>
+                <td>Java Lab (SKS)</td>
+                <td>CN (PC)</td>
+                <td>NM (MBS)</td>
+                <td>MP</td>
+                <td>Java (SKS)</td>
+                <td>Club</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <button class="print-btn">Print</button>
+        <button class="generate-btn">Generate Time Table</button>
+    </div>
+</div>
+   
+<!--SETTINGS PAGE BEGINS-->
+            
+   
+    <div id="settings-page" class="page">
+        <h2>Settings</h2>
+        <label for="lectureDuration">Set Lecture Duration:</label>
+        <select id="lectureDuration">
+            <option value="1 hour">1 hour</option>
+            <option value="2 hours">2 hours</option>
+            <option value="3 hours">3 hours</option>
+        </select>
+
+        <label for="breakAfter">In Between Lecture Break Duration after every 2 lectures:</label>
+        <select id="breakAfter">
+            <option value="5 min">5 min</option>
+            <option value="10 min">10 min</option>
+            <option value="15 min">15 min</option>
+        </select>
+
+        <label for="breakDuration">Break Duration:</label>
+        <select id="breakDuration">
+            <option value="15 min">15 min</option>
+            <option value="30 min">30 min</option>
+            <option value="45 min">45 min</option>
+        </select>
+        
+        <button id="saveSettings">Save</button>
+    </div>
+</div>
+</div>
+
+<!--SCRIPTS BEGINS-->
+    
+<!--script>
+    // Function to show only the selected page and hide others
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.style.display = 'none'; // Hide every page initially
+        });
+
+        // Show the selected page
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.style.display = 'block'; // Display the target page
+        }
+
+        // Remove active class from all sidebar links and add to the selected one
+        document.querySelectorAll('.nav-links li').forEach(link => link.classList.remove('active'));
+        if (event.currentTarget) {
+            event.currentTarget.classList.add('active');
+        }
+    }
+
+    // Sidebar navigation event listeners
+    document.querySelectorAll(".sidebar-link").forEach(link => {
+        link.addEventListener("click", function () {
+            const pageId = this.getAttribute("data-page"); // Get the page ID
+            showPage(pageId); // Show the respective page
+        });
+    });
+
+    // Function to handle logout
+    function logout() {
+        window.location.href = "signup.html"; // Redirect to signup or home page
+    }
+
+    // Initial load - Hide all pages except the first/default one
+    document.addEventListener("DOMContentLoaded", function() {
+        showPage("defaultPageId"); // Replace "defaultPageId" with the ID of your initial landing page
+    });
+    // Get all sidebar links and page sections
+const sidebarLinks = document.querySelectorAll(".sidebar-link");
+const pages = document.querySelectorAll(".page");
+
+// Function to show only the selected page
+function showPage(pageId) {
+    pages.forEach(page => {
+        page.style.display = (page.id === pageId) ? "block" : "none";
+    });
+}
+
+// Add event listeners to sidebar links
+sidebarLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        const pageId = this.getAttribute("data-page");
+        showPage(pageId);
+    });
+});
+
+</script-->
+<!--script>
+    // Function to show only the selected page and hide others
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.style.display = 'none'; // Hide every page initially
+        });
+
+        // Show the selected page
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.style.display = 'block'; // Display the target page
+        }
+
+        // Remove active class from all sidebar links
+        document.querySelectorAll('.nav-links li').forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add active class to the clicked link
+        const clickedLink = document.querySelector(`.nav-links li[onclick="showPage('${pageId}')"]`);
+        if (clickedLink) {
+            clickedLink.classList.add('active');
+        }
+    }
+
+    // Add event listeners to sidebar links
+    document.querySelectorAll('.nav-links li').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent event bubbling
+        });
+    });
+
+    // Function to handle logout
+    document.querySelector('.logout-btn').addEventListener('click', function () {
+        window.location.href = "signup.html"; // Redirect to signup or home page
+    });
+</script-->
+<script src="script.js"></script>
+
+
+</body>
+</html>

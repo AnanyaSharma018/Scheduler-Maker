@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Navbar styles */
+nav {
+    background-color: white;
+    padding: 20px;
+   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background-color: #536df9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    background-color: #3c53c6;
+}
+
+/* Main section styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.highlight {
+    color: #536df9;
+}
+
+.text-content p {
+    color: #6e6e6e;
+    margin: 20px 0;
+}
+
+.get-started-btn {
+    padding: 10px 30px;
+    background-color: #536df9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.get-started-btn:hover {
+    background-color: #3c53c6;
+}
+
+/* Image section */
+.image-content img {
+    max-width: 500px;
+    height: auto;
+}
+
+/* Features section */
+.features-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* About Us section */
+.about-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 600px;
+    color: #6e6e6e;
+}
+
+.about-image img {
+    width: 500px;
+    height: auto;
+}
+
+.about-image p {
+    text-align: center;
+    color: #6e6e6e;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
