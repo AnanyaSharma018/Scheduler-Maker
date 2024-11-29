@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Table Management System</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
+         <p class="menubar" style="margin: 10px;"><i class="fa-solid fa-bars"></i></p>
         <div class="sidebar">
             <div class="profile">
                 <img src="assests/profile.png" alt="Profile Image">
                 <p>Profile</p>
             </div>
             <ul class="nav-links">
+                <li onclick="showPage('empty')"></li>
                 <li onclick="showPage('dashboard')">Dashboard</li>
                 <li onclick="showPage('faculty')" class="active">Faculty</li>
                 <li onclick="showPage('classes')">Classes</li>
@@ -29,6 +33,10 @@
         <!-- Content -->
         <div class="content">
             <!-- DASHBOARD PAGE BEGINS -->
+
+
+
+
             <div id="dashboard" class="page active">
                 <!--h2>Dashboard</h2>
                 <p>Welcome to the dashboard.</p>
@@ -53,7 +61,7 @@
                     <i class="fas fa-search"></i>
                 </div>
             </header-->
-            
+           
             <div class="header">
                 <div class="welcome-section">
                     <h2>Hello John 👋</h2>
@@ -97,13 +105,13 @@
 
 
             <!-- FACULTY PAGE BEGINS-->
-            <div id="faculty" class="page">
+            <div id="faculty" class="page" style="width: 75%;" >
                 <h2>FACULTY</h2>
                 <h3>Add a New Record or Update</h3>
                 <div class="faculty-form-table">
-                    <form class="faculty-form">
+                    <form class="faculty-form" style="width: 100%;">
                         <label>Faculty Name:</label>
-                        <input type="text" placeholder="John Doe">
+                        <input type="text" placeholder="John Doe" >
 
                         <label>Subject Code:</label>
                         <input type="text" placeholder="Bca-401">
@@ -116,15 +124,49 @@
 
                         <!-- Buttons -->
                         <div class="button-group">
-                            <button type="button" id="addFaculty">Add</button>
-                            <button type="button" id="modifyFaculty">Modify</button>
-                            <button type="button" id="deleteFaculty">Delete</button>
+                            <button type="button" onclick="addFaculty()">Add</button>
+                            <button type="button" onclick="modifyFaculty()">Modify</button>
+                            <button type="button" onclick="deleteFaculty()">Delete</button>
                         </div>
 
                         <button type="submit" class="save-btn">Save</button>
                     </form>
-
-                    <!-- Faculty Table -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>F-Id</th>
+                                <th>Subject Code</th>
+                                <th>Faculty Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="row-select"></td>
+                                <td>102</td>
+                                <td>Bca-401</td>
+                                <td>John Doe</td>
+                                <td>johndoe@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="row-select"></td>
+                                <td>202</td>
+                                <td>Bca-201</td>
+                                <td>Tony Stark</td>
+                                <td>tonystarkk@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="row-select"></td>
+                                <td>502</td>
+                                <td>Bca-101</td>
+                                <td>John Smith</td>
+                                <td>johnsmith@gmail.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Faculty Table >
                     <table>
                         <thead>
                             <tr>
@@ -154,7 +196,7 @@
                                 <td>johnsmith@gmail.com</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table-->
                 </div>
             </div>
 
@@ -162,23 +204,21 @@
 
             <!-- CLASSES BEIGN BEGINS -->
 
-<div id="classes" class="page">
+<div id="classes" class="page"  style="width: 100vw;">
     <h2 class="page-title">CLASSES</h2>
     
-    <div class="classes-form-container">
+    <div class="classes-form-container" >
         <!-- Dropdowns for Course, Semester, and Section -->
-        <div class="dropdown-container">
-            <select class="dropdown">
+        <div class="dropdown-container" style="width: 100%;">
+            <select class="dropdown" style="width: auto;">
                 <option>Select Course</option>
                 <option>BCA</option>
                 <option>BBA</option>
-                <option>BTECH</option>
-                <option>MBA</option>
-                <option>PGDM</option>
+               
             </select>
 
-            <select class="dropdown">
-                <option>Select Semester</option>
+            <select class="dropdown" style="width: 100%; overflow: hidden;">
+                <option >Select Semester</option>
                 <option>Semester 1</option>
                 <option>Semester 2</option>
                 <option>Semester 3</option>
@@ -186,8 +226,7 @@
                 <option>Semester 5</option>
                 <option>Semester 6</option>
             </select>
-
-            <select class="dropdown">
+            <select class="dropdown" style="width: 100%;">
                 <option>Select Section</option>
                 <option>A</option>
                 <option>B</option>
@@ -200,169 +239,23 @@
 
         <!-- Save Button -->
         <button class="save-btn">Save</button>
+        
     </div>
-</div>
-
-            <!--SUBJECT PAGE BEGINS-->
-            <div id="subject" class="page" style="display: none;">
-                <!-- Grey Background Header -->
-                <div class="subject-header">
-                  <h1>  SUBJECTS<h1>
-                </div>
-            
-                <!-- Dropdown Section -->
-                <div class="subject-dropdowns">
-                    <div>
-                        <label for="course-select">Select Course:</label>
-                        <select id="course-select">
-                            <option>BCA</option>
-                            <option>BBA</option>
-                            <option>BTECH</option>
-                            <option>MBA</option>
-                            <option>PGDM</option>
-                        </select>
-                    </div>
-            
-                    <div>
-                        <label for="semester-select">Select Semester:</label>
-                        <select id="semester-select">
-                            <option>Semester 1</option>
-                            <option>Semester 2</option>
-                            <option>Semester 3</option>
-                            <option>Semester 4</option>
-                            <option>Semester 5</option>
-                            <option>Semester 6</option>
-                        </select>
-                    </div>
-                </div>
-            
-                <!-- Table Section -->
-                <div class="subject-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Course Code</th>
-                                <th>Course Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Bca-501</td><td>DBMS</td></tr>
-                            <tr><td>Bca-502</td><td>Java</td></tr>
-                            <tr><td>Bca-503</td><td>CN</td></tr>
-                            <tr><td>Bca-504</td><td>NM</td></tr>
-                            <tr><td>Bca-505</td><td>DBMS (Practical)</td></tr>
-                            <tr><td>Bca-506</td><td>Java (Practical)</td></tr>
-                            <tr><td>Bca-507</td><td>Viva Voice on Summer Training</td></tr>
-                            <tr><td>Bca-508</td><td>MP</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            
-                <!-- Save Button -->
-                <div class="subject-save-btn">
-                    <button>Save</button>
-                </div>
-            </div>
-            
-            
-
-            <!-- ROOM NUMBER PAGE BEGINS -->
-            <div id="room-number" class="page">
-                <h2>Room Number</h2>
-        <div class="page-header">
-            <h1>ROOM</h1>
-          </div>
-          
-          <div class="dropdowns">
-            <label for="roomNumber">Room Number:</label>
-            <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter Room Number">
-          
-            <label for="className">Class Name:</label>
-            <select id="className" name="className">
-              <option>Select Class</option>
-              <option>Class 1</option>
-              <option>Class 2</option>
-              <option>Class 3</option>
-              <!-- Add more class options as needed -->
-            </select>
-          
-            <label for="coordinatorName">Coordinator Name:</label>
-            <select id="coordinatorName" name="coordinatorName">
-              <option>Select Coordinator</option>
-              <option>John Doe</option>
-              <option>Jane Smith</option>
-              <option>Mark Johnson</option>
-              <!-- Add more coordinator options as needed -->
-            </select>
-          </div>
-          
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Room Number</th>
-                  <th>Class Name</th>
-                  <th>Coordinator Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Dummy data for table rows -->
-                <tr>
-                  <td>101</td>
-                  <td>Class 1</td>
-                  <td>John Doe</td>
-                </tr>
-                <tr>
-                  <td>102</td>
-                  <td>Class 2</td>
-                  <td>Jane Smith</td>
-                </tr>
-                <tr>
-                  <td>103</td>
-                  <td>Class 3</td>
-                  <td>Mark Johnson</td>
-                </tr>
-                <!-- Additional rows as needed -->
-              </tbody>
-            </table>
-          </div>
-          
-          <div class="action-buttons">
-            <button class="add-btn">Add</button>
-            <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-          </div>
-          
-          <button class="save-btn">Save</button>
-          
-          
-            </div>
-
-           
-      <!--TIME TABLE PAGE BEGINS-->
-    <!-- TIME TABLE PAGE BEGINS -->
-<div id="timetable-page" class="page">
-    <div class="header">
-        <h3>G.L. Bajaj Institute of Management</h3>
-        <p>Department of BCA</p>
-        <p>Time Table</p>
-        <p>Odd Semester | 2024-2025 | BCA 3A | Room No: 8002</p>
-    </div>
-
-    <!-- Timetable Table -->
-    <table class="timetable">
+    <div style="width: 100vw; padding: 12px; scroll-behavior: auto; overflow-x: scroll; margin: auto;">
+    <table class="timetable" style="width: 100%; ">
         <thead>
             <tr>
                 <th>Day</th>
                 <th>8:55 - 9:55</th>
                 <th>9:55 - 10:55</th>
-                <th>10:55 - 11:05</th> <!-- Short Break -->
-                <th>11:05 - 12:05</th>
-                <th>12:05 - 1:05</th>
-                <th>1:05 - 2:05</th> <!-- Lunch Break -->
-                <th>2:05 - 3:05</th>
-                <th>3:05 - 4:05</th>
-                <th>4:05 - 4:35</th> <!-- Break -->
+                <th>10:55 - 11:00</th> <!-- Short Break -->
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 1:00</th>
+                <th>1:00 - 1:45</th> <!-- Lunch Break -->
+                <th>1:45 - 2:40</th>
+                <th>2:40 - 3:35</th>
+                <th>3:35 - 3:40</th>
+                <th>3:40 - 4:35</th> <!-- Break -->
             </tr>
         </thead>
         <tbody>
@@ -375,7 +268,9 @@
                 <td>Java (SKS)</td>
                 <td rowspan="6" class="lunch">LUNCH</td>
                 <td>Java (SKS)</td>
+                
                 <td>MP</td>
+                <td rowspan="6" class="break">Break</td>
                 <td>Sports</td>
             </tr>
             <tr>
@@ -430,7 +325,318 @@
             </tr>
         </tbody>
     </table>
+</div>
+</div>
 
+            <!--SUBJECT PAGE BEGINS-->
+            <div id="subject" class="page" style="display: none;width: 100%;">
+                <!-- Grey Background Header -->
+                <div class="subject-header" style="background-color: rgb(218, 214, 214); padding: 2px; width: 100%;">
+                  <h1>SUBJECTS<h1>
+                </div>  
+
+                <!-- Dropdown Section -->
+                <div class="subject-dropdowns" style="width: 100%;background-color: white; margin-top: 10px;">
+                    <div>
+                        <label for="course-select" >Select Course:</label>
+                        <select id="course-select" style="width: 100%;">
+                            <option>BCA</option>
+                            <option>BBA</option>
+                            <option>BTECH</option>
+                            <option>MBA</option>
+                            <option>PGDM</option>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <label for="semester-select">Select Semester:</label>
+                        <select id="semester-select" style="width: 100%;">
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <!-- Table Section -->
+                <div class="subject-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Bca-501</td><td>DBMS</td></tr>
+                            <tr><td>Bca-502</td><td>Java</td></tr>
+                            <tr><td>Bca-503</td><td>CN</td></tr>
+                            <tr><td>Bca-504</td><td>NM</td></tr>
+                            <tr><td>Bca-505</td><td>DBMS (Practical)</td></tr>
+                            <tr><td>Bca-506</td><td>Java (Practical)</td></tr>
+                            <tr><td>Bca-507</td><td>Viva Voice on Summer Training</td></tr>
+                            <tr><td>Bca-508</td><td>MP</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Save Button -->
+                <div class="subject-save-btn">
+                    <button>Save</button>
+                </div>
+            </div>
+            
+            
+
+            <!-- ROOM NUMBER PAGE BEGINS >
+            <div id="room-number" class="page" style="width:79%;">
+          <div class="page-header" style="width: 100%;">
+            <h3>Room Number</h3>
+          </div>
+          
+          <div class="dropdowns" style="width: 100%;">
+            <label for="roomNumber">Room Number:</label>
+            <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter Room Number" style="width: 100%;">
+          
+            <label for="className">Class Name:</label>
+            <select id="className" name="className">
+              <option>Select Class</option>
+              <option>Class 1</option>
+              <option>Class 2</option>
+              <option>Class 3</option>
+              <!-- Add more class options as needed >
+            </select>
+          
+            <label for="coordinatorName">Coordinator Name:</label>
+            <select id="coordinatorName" name="coordinatorName">
+              <option>Select Coordinator</option>
+              <option>John Doe</option>
+              <option>Jane Smith</option>
+              <option>Mark Johnson</option>
+              <!-- Add more coordinator options as needed >
+            </select>
+          </div>
+          
+          <div class="table-container">
+            <table>
+              
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Class Name</th>
+                        <th>Coordinator Name</th>
+                        <th>Select</th> <!-- Checkbox column >
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Class 1</td>
+                        <td>John Doe</td>
+                        <td><input type="checkbox" class="select-row"></td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Class 2</td>
+                        <td>Jane Smith</td>
+                        <td><input type="checkbox" class="select-row"></td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Class 3</td>
+                        <td>Mark Johnson</td>
+                        <td><input type="checkbox" class="select-row"></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+          </div>
+          
+          
+          <div class="action-buttons">
+            <button class="add-btn">Add</button>
+            <button class="update-btn">Update</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+          
+          <button class="save-btn">Save</button>
+          
+          
+            </div-->
+            <!-- ROOM NUMBER PAGE BEGINS -->
+<div id="room-number" class="page" style="width:79%;">
+    <div class="page-header" style="width: 100%;">
+        <h3>Room Number</h3>
+    </div>
+    
+    <div class="dropdowns" style="width: 100%;">
+        <label for="roomNumber">Room Number:</label>
+        <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter Room Number" style="width: 100%;">
+
+        <label for="className">Class Name:</label>
+        <select id="className" name="className">
+            <option>Select Class</option>
+            <option>Class 1</option>
+            <option>Class 2</option>
+            <option>Class 3</option>
+            <!-- Add more class options as needed -->
+        </select>
+
+        <label for="coordinatorName">Coordinator Name:</label>
+        <select id="coordinatorName" name="coordinatorName">
+            <option>Select Coordinator</option>
+            <option>John Doe</option>
+            <option>Jane Smith</option>
+            <option>Mark Johnson</option>
+            <!-- Add more coordinator options as needed -->
+        </select>
+    </div>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Room Number</th>
+                    <th>Class Name</th>
+                    <th>Coordinator Name</th>
+                    <th>Select</th> <!-- Checkbox column -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dummy data for table rows -->
+                <tr>
+                    <td>101</td>
+                    <td>Class 1</td>
+                    <td>John Doe</td>
+                    <td><input type="checkbox" class="select-row"></td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Class 2</td>
+                    <td>Jane Smith</td>
+                    <td><input type="checkbox" class="select-row"></td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Class 3</td>
+                    <td>Mark Johnson</td>
+                    <td><input type="checkbox" class="select-row"></td>
+                </tr>
+                <!-- Additional rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="action-buttons">
+        <button class="add-btn" onclick="addRoom()">Add</button>
+        <button class="update-btn" onclick="updateRoom()">Update</button>
+        <button class="delete-btn" onclick="deleteRoom()">Delete</button>
+    </div>
+    
+    <button class="save-btn" onclick="saveRooms()">Save</button>
+</div>
+
+
+           
+      <!--TIME TABLE PAGE BEGINS-->
+    <!-- TIME TABLE PAGE BEGINS -->
+<div id="timetable-page" class="page">
+    <div class="header">
+        <h3>G.L. Bajaj Institute of Management</h3>
+        <p>Department of BCA</p>
+        <p>Time Table</p>
+        <p>Odd Semester | 2024-2025 | BCA 3A | Room No: 8002</p>
+    </div>
+
+    <!-- Timetable Table -->
+     <div style="width: 100vw; padding: 12px; scroll-behavior: auto; overflow-x: scroll; margin: auto;">
+    <table class="timetable" style="width: 100%; ">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>8:55 - 9:55</th>
+                <th>9:55 - 10:55</th>
+                <th>10:55 - 11:00</th> <!-- Short Break -->
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 1:00</th>
+                <th>1:00 - 1:45</th> <!-- Lunch Break -->
+                <th>1:45 - 2:40</th>
+                <th>2:40 - 3:35</th>
+                <th>3:35 - 3:40</th>
+                <th>3:40 - 4:35</th> <!-- Break -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>NM (MBS)</td>
+                <td>CN (PC)</td>
+                <td rowspan="6" class="break">BREAK</td>
+                <td>DBMS Lab (SKG)</td>
+                <td>Java (SKS)</td>
+                <td rowspan="6" class="lunch">LUNCH</td>
+                <td>Java (SKS)</td>
+                
+                <td>MP</td>
+                <td rowspan="6" class="break">Break</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>NM (MBS)</td>
+                <td>CN (PC)</td>
+                <td>LIB</td>
+                <td>CN (PC)</td>
+                <td>Java (SKS)</td>
+                <td>MP</td>
+                <td>DBMS (SKG)</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>DBMS (SKG)</td>
+                <td>NM (MBS)</td>
+                <td>PDP</td>
+                <td>DBMS Lab (SKG)</td>
+                <td>MP</td>
+                <td>NM (MBS)</td>
+                <td>CN (PC)</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Java Lab (SKS)</td>
+                <td>CN (PC)</td>
+                <td>NM (MBS)</td>
+                <td>DBMS (SKG)</td>
+                <td>MP</td>
+                <td>Java (SKS)</td>
+                <td>Club</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>DBMS (SKG)</td>
+                <td>Java (SKS)</td>
+                <td>LIB</td>
+                <td>CN (PC)</td>
+                <td>MP</td>
+                <td>Sports</td>
+                <td>DBMS (SKG)</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>DBMS (SKG)</td>
+                <td>Java Lab (SKS)</td>
+                <td>CN (PC)</td>
+                <td>NM (MBS)</td>
+                <td>MP</td>
+                <td>Java (SKS)</td>
+                <td>Club</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
     <!-- Button Container -->
     <div class="button-container">
         <button class="print-btn">Print</button>
@@ -441,30 +647,32 @@
 <!--SETTINGS PAGE BEGINS-->
             
    
-    <div id="settings-page" class="page">
-        <h2>Settings</h2>
-        <label for="lectureDuration">Set Lecture Duration:</label>
-        <select id="lectureDuration">
+    <div id="settings-page" class="page" style="width: 100vw;">
+        <h2 style="width: 100vw;">Settings</h2>
+        <label for="lectureDuration" style="width: 100vw;">Set Lecture Duration:</label>
+        <select id="lectureDuration" style="width: 100vw;">
             <option value="1 hour">1 hour</option>
             <option value="2 hours">2 hours</option>
             <option value="3 hours">3 hours</option>
         </select>
 
-        <label for="breakAfter">In Between Lecture Break Duration after every 2 lectures:</label>
-        <select id="breakAfter">
+        <label for="breakAfter" style="width: 100vw;">In Between Lecture Break Duration after every 2 lectures:</label>
+        <select id="breakAfter" style="width: 100vw;">
             <option value="5 min">5 min</option>
             <option value="10 min">10 min</option>
             <option value="15 min">15 min</option>
         </select>
 
-        <label for="breakDuration">Break Duration:</label>
-        <select id="breakDuration">
+        <label for="breakDuration" style="width: 100vw;">Break Duration:</label>
+        <select id="breakDuration" style="width: 100vw;">
             <option value="15 min">15 min</option>
             <option value="30 min">30 min</option>
             <option value="45 min">45 min</option>
         </select>
         
-        <button id="saveSettings">Save</button>
+        <button id="saveSettings" style="width: 100vw;">Save</button>
+        
+        
     </div>
 </div>
 </div>
@@ -549,7 +757,7 @@ sidebarLinks.forEach(link => {
         });
 
         // Add active class to the clicked link
-        const clickedLink = document.querySelector(`.nav-links li[onclick="showPage('${pageId}')"]`);
+        const clickedLink = document.querySelector(.nav-links li[onclick="showPage('${pageId}')"]);
         if (clickedLink) {
             clickedLink.classList.add('active');
         }
@@ -568,7 +776,53 @@ sidebarLinks.forEach(link => {
     });
 </script-->
 <script src="script.js"></script>
+<script>
+const sidebar = document.querySelector('.sidebar'); 
+const menu = document.querySelector('.menubar');   
+const navlink = document.querySelector('.nav-links');
+let show = false; 
+const mediaQuery = window.matchMedia("(min-width: 770px)");
 
+function handleMediaChange(event) {
+    if (!event.matches) { 
+        sidebar.style.display = 'block'; 
+        show = false; 
+    } else {
+        menu.style.display = 'block'; 
+    }
+}
+
+mediaQuery.addEventListener("change", handleMediaChange);
+
+navlink.addEventListener('click', function() {
+    if (!mediaQuery.matches) { 
+        sidebar.style.display = 'none'; 
+        menu.innerHTML = `<i class="fa-solid fa-bars"></i>`; 
+        show = false; 
+    }
+});
+
+menu.addEventListener('click', function() { 
+    if (!mediaQuery.matches) { 
+        show = !show; 
+        if (show) {
+            sidebar.style.display = 'block'; 
+            menu.innerHTML = `<i class="fa-solid fa-xmark"></i>`; 
+        } else {
+            sidebar.style.display = 'none'; 
+            menu.innerHTML = `<i class="fa-solid fa-bars"></i>`; 
+        }
+    }
+});
+
+// Initial check to set the correct visibility of the menu bar
+handleMediaChange(mediaQuery);
+ 
+    // function handleclick(){
+    //     show=false
+    // }
+  </script>
+  
 
 </body>
 </html>

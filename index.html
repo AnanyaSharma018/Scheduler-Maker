@@ -9,18 +9,26 @@
 <body>
     <!-- Navbar -->
     <nav>
-        <ul class="navbar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="signup.html" class="signup-btn">Sign up</a></li>
-        </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <div class="nav-right">
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <!--li><a href="/Dashboard.html">Dashboard</a></li-->
+            </ul>
+            <a href="signup.html" class="signup-btn">Sign up</a>
+        </div>
+        <button class="close-toggle" aria-label="Close menu">&times;</button>
     </nav>
-
+    
+    
+    
     <!-- Main Content -->
     <section class="main-content">
+        <section class="main-content" id="home"></section>
         <div class="text-content">
-            <h1>WELCOME TO <span class="highlight">EDUPLANNER</span></h1>
+            <h1>WELCOME TO <span class="highlight">SCHEDULER MAKER</span></h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             <a href="signup.html" class="get-started-btn">Get Started →</a>
         </div>
@@ -31,7 +39,7 @@
 
     <!-- Features Section -->
     <section class="features-section">
-        <h2>FEATURES OF <span class="highlight">EDUPLANNER</span></h2>
+        <h2>FEATURES OF <span class="highlight">SCHEDULER MAKER</span></h2>
         <div class="features">
             <div class="feature-item">
                 <img src="assests/features1.png" alt="Automated Schedule">
@@ -62,10 +70,14 @@
 
     <!-- About Us Section -->
     <section class="about-section">
+        <section class="about-section" id="about"></section>
         <h2>ABOUT <span class="highlight">US</span></h2>
         <div class="about-content">
             <div class="about-text">
-                <!--p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <!--p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                 scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                  electronic typesetting, remaining essentially unchanged.</p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p-->
                     <p>Welcome to [Scheduler Maker], the ultimate solution for effortless timetable management. Our 
                         system is designed to revolutionize the way educational institutions handle scheduling. With just 
@@ -80,14 +92,93 @@
                             more efficient way to organize your academic schedules.</p>
             </div>
             <div class="about-image">
-                <img src="assests/aboutus.png" alt="About Us Illustration">
-                <p>Designed by Freepik</p>
-            </div> 
-
+                <img src="assests/About Us.png" alt="About Us Illustration">
+                
+            </div>
         </div>
     </section>
+    <!--Contact us section-->
+    <dy class="body">
+    <section class="body" id="contact"></section>
+  <header class="header">
+    <div class="container">
+      <div class="form-container">
+        <!-- Form Header -->
+        <h1 class="form-title">Send a Message</h1>
+ 
+        <!-- Form Fields -->
+        <div class="form-body">
+          <!-- Row for First Name and Last Name -->
+          <div class="row">
+            <div class="input-group">
+              <label class="label">First Name(PST)</label>
+              <input type="text" placeholder="First Name" class="input" />
+            </div>
+            <div class="input-group">
+              <label class="label">Last Name</label>
+              <input type="text" placeholder="Last Name" class="input" />
+            </div>
+          </div>
 
-    <script src="script.js"></script>
+          <!-- Row for Phone and Email -->
+          <div class="row">
+            <div class="input-group">
+              <img src="./src/phone.png" alt="" class="icon">
+              <label class="label">Phone</label>
+              <input type="text" placeholder="Phone" class="input" />
+            </div>
+            <div class="input-group">
+              <img src="" alt="" class="icon">
+              <label class="label">Email</label>
+              <input type="text" placeholder="Email" class="input" />
+            </div>
+          </div>
+
+          <!-- Group or Company Field -->
+          <div class="input-group">
+            <label class="label">Group or Company</label>
+            <input type="text" placeholder="Group or Company" class="input" />
+          </div>
+
+          <!-- Message Field -->
+          <div class="input-group">
+            <label class="label">How can I help you?</label>
+            <input type="text" placeholder="Your message" class="input" />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-container">
+          <button class="submit-button">
+            <img src="src/lucide_send.png" class="submit-icon" alt="">
+            SUBMIT
+          </button>
+        </div>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="contact-info">
+        <div>
+          <div class="contact-title">Contact us</div>
+          <div class="contact-item">
+            <img src="./src/phone.png" alt="" class="icon">
+            <span class="contact-text">+917665999929</span>
+          </div>
+          <div class="contact-item">
+            <img src="../images/Contact Us/mail.jpg" alt="" class="icon">
+            <span class="contact-text">Info@Theindiansummit.Com</span>
+          </div>
+          <!-- Social Media Icons Row -->
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="src/ic--baseline-facebook.png" class="social-icon" alt=""></a>
+            <a href="https://www.X.com" target="_blank"><img src="src/twiteer.png" class="social-icon" alt=""></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="src/entypo-social_youtube-with-circle.png" class="social-icon" alt=""></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="src/entypo-social_linkedin-with-circle.png" class="social-icon" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>    
+    <script src = "home.js"></script>
 </body>
 </html>
-
